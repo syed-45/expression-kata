@@ -1,1 +1,1 @@
-# TypeScript Interview Kata Practice
+# Expression Tree Kata scaffolding and solution
