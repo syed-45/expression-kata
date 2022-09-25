@@ -1,8 +1,8 @@
-export type Operation = "add" | "subtract" | "divide" | "multiply";
+export type Operator = "add" | "subtract" | "divide" | "multiply";
 
 export type Expression =
     | number
-    | { op: Operation; a: Expression; b: Expression };
+    | { op: Operator; a: Expression; b: Expression };
 
 function evaluate(exp: Expression): number {
     if (typeof exp === "number") {
@@ -11,7 +11,7 @@ function evaluate(exp: Expression): number {
     return apply(exp.op, evaluate(exp.a), evaluate(exp.b));
 }
 
-function apply(op: Operation, a: number, b: number) {
+function apply(op: Operator, a: number, b: number) {
     switch (op) {
         case "add":
             return a + b;

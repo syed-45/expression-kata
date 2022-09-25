@@ -1,4 +1,4 @@
-import { evaluate, Expression } from "./kata";
+import { evaluate, Expression } from "./expressions";
 describe("expression evaluation", () => {
     test("expression works with a literal", () => {
         const tree1: Expression = 10;
@@ -26,5 +26,14 @@ describe("expression evaluation", () => {
             b: { op: "subtract", a: 3, b: 8 },
         };
         expect(evaluate(tree1)).toBe(10);
+    });
+
+    test("test tree3", () => {
+        const tree3: Expression = {
+            op: "multiply",
+            a: { op: "add", a: 1, b: 3 },
+            b: { op: "subtract", a: 7, b: { op: "subtract", a: 20, b: 18 } },
+        };
+        expect(evaluate(tree3)).toBe(20);
     });
 });

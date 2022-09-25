@@ -1,4 +1,4 @@
-import { Expression, Operation } from "./kata";
+import { Expression, Operator } from "./expressions";
 
 type OperatorToken = "+" | "-" | "*" | "/";
 type ParenToken = "(" | ")";
@@ -63,11 +63,11 @@ function parseTokenizedExpression(toks: Token[]): [Expression, Token[]] {
 }
 export function parseExpression(str: string): Expression {
     const tokens = tokenize(str);
-    console.log(tokens);
+    // console.log(tokens);
     return parseTokenizedExpression(tokens)[0];
 }
 
-export function parseOp(str: string): Operation {
+export function parseOp(str: string): Operator {
     if (str === "+") {
         return "add";
     }

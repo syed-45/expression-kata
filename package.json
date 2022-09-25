@@ -1,7 +1,8 @@
 {
-  "name": "ts-kata-practice",
+  "name": "expressions-solver",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/expressions.js",
+  "typings": "dist/expressions.d.ts",
   "license": "CC-BY-NC-ND-4.0",
   "devDependencies": {
     "@types/jest": "^29.0.0",
