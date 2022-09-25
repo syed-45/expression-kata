@@ -1,20 +1,21 @@
 {
-  "name": "expressions-solver",
+  "name": "expressions-solver-kata",
   "version": "1.0.0",
-  "main": "dist/expressions.js",
-  "typings": "dist/expressions.d.ts",
+  "main": "dist/task/expressions.js",
+  "typings": "dist/task/expressions.d.ts",
   "license": "CC-BY-NC-ND-4.0",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:solutions": "jest solutions",
+    "start": "ts-node src/task/expressions.ts",
+    "start:tsc": "tsc --watch"
+  },
   "devDependencies": {
     "@types/jest": "^29.0.0",
     "jest": "^29.0.2",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.2",
     "ts-jest": "^29.0.1"
-  },
-  "scripts": {
-    "test": "jest",
-    "start": "ts-node src/kata.ts",
-    "start:tsc": "tsc --watch",
-    "test:watch": "jest --watchAll"
   }
 }
