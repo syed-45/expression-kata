@@ -1,5 +1,14 @@
 # Expression Tree Kata scaffolding, utilities, and solutions
 
+```mermaid
+flowchart TD
+    A[+] --> B[*]
+    A --> C(6)
+    B --> D(12)
+    B --> E(3)
+
+```
+
 This repo contains various resources for the exercise: [Evaluate calculator expressions](https://www.notion.so/weareacademy/Evaluate-calculator-expressions-8ca6e97836dc42ba949a6e8b261378d3).
 
 If you want some scaffolding you can work from `src/task/expressions.ts` and use or re-write tests in `src/task/expressions-test.ts`
