@@ -11,8 +11,8 @@ type Token =
           t: "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
       };
 
+//example:
 //"(+ (/ 5 (* 2 5)) (- 5 4))"
-
 function tokenize(str: string): Token[] {
     function charToToken(c: string): Token | null {
         switch (c) {
@@ -64,7 +64,6 @@ function parseTokenizedExpression(toks: Token[]): [Expression, Token[]] {
 }
 export function parseExpression(str: string): Expression {
     const tokens = tokenize(str);
-    // console.log(tokens);
     return parseTokenizedExpression(tokens)[0];
 }
 

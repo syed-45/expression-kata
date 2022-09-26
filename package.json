@@ -9,6 +9,7 @@
     "test:watch": "jest --watchAll",
     "test:solutions": "jest solutions",
     "start": "ts-node src/task/expressions.ts",
+    "demoGraph": "ts-node src/solutions/generateGraphDemo.ts",
     "start:tsc": "tsc --watch"
   },
   "devDependencies": {

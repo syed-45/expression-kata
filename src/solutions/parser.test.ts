@@ -1,6 +1,5 @@
 //This source is not part of the exercise.
 import { parseExpression } from "./parser";
-
 describe("parser", () => {
     test("parse of literal", () => {
         expect(parseExpression("7")).toBe(7);
@@ -25,5 +24,31 @@ describe("parser", () => {
             a: { op: "divide", a: 5, b: { op: "multiply", a: 2, b: 5 } },
             b: { op: "subtract", a: 5, b: 4 },
         });
+    });
+
+    test("parse of countdown attempt", () => {
+        const expr = parseExpression("(+ (* 2 6) (* 5 (- (+ 3 3) 4))))");
+        const expected = {
+            op: "add",
+            a: {
+                op: "multiply",
+                a: 2,
+                b: 6,
+            },
+            b: {
+                op: "multiply",
+                a: 5,
+                b: {
+                    op: "subtract",
+                    a: {
+                        op: "add",
+                        a: 3,
+                        b: 3,
+                    },
+                    b: 4,
+                },
+            },
+        };
+        expect(expr).toStrictEqual(expected);
     });
 });
