@@ -36,4 +36,7 @@ describe("expression evaluation", () => {
         };
         expect(evaluate(tree3)).toBe(20);
     });
+    test("test", () => {
+        const tree: Expression = {}
+    }) 
 });
